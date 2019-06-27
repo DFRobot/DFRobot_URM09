@@ -1,0 +1,38 @@
+#######################################
+# Syntax Coloring DFRobot_URM09
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+DFRobot_URM09	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+SetModeRange	KEYWORD2
+SetMeasurement	KEYWORD2
+i2cReadTemperature	KEYWORD2
+i2cReadDistance	KEYWORD2
+GetI2cDeviceAddress	KEYWORD2
+ReadDeviceAddress	KEYWORD2
+ModifyDeviceAddress	KEYWORD2
+DFRobot_URM09	KEYWORD2
+~DFRobot_URM09	KEYWORD2
+i2cWriteTemDistance	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+MEASURE_MODE_AUTOMATIC	LITERAL1
+MEASURE_MODE_PASSIVE	LITERAL1
+CMD_DISTANCE_MEASURE	LITERAL1
+MEASURE_RANG_500	LITERAL1
+MEASURE_RANG_300	LITERAL1
+MEASURE_RANG_150	LITERAL1
+
+
