@@ -118,7 +118,7 @@ int16_t DFRobot_URM09::GetI2cDeviceAddress()
   Wire.begin();                         // connecting the i2c bus 
   uint8_t error ,address;
   // the Write.endTransmisstion to see if a device did acknowledge to the address.
-  for (address = 1; address < 126; address++ )
+  for (address = 1; address < 127; address++ )
   {
     Wire.beginTransmission(address);
     error = Wire.endTransmission();

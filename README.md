@@ -183,9 +183,9 @@ import URM09
 
 MCU                | Work Well | Work Wrong | Untested  | Remarks
 ------------------ | :----------: | :----------: | :---------: | -----
-FireBeetle-ESP32   |      √       |             |            | 
-RaspberrayPi       |      √       |             |            | Only support python3
-Arduino uno        |      √       |             |            | 
+FireBeetle-ESP32   |      √       |              |             | 
+RaspberrayPi       |      √       |              |             | Only support python3
+Arduino uno        |      √       |              |             | 
 
 ## History
 
@@ -194,4 +194,4 @@ Arduino uno        |      √       |             |            |
 
 ## Credits
 
-Written by Frank(jiehan.guo@dfrobot.com), 2018. (Welcome to our [website](https://www.dfrobot.com/))
+Written by Frank(jiehan.guo@dfrobot.com), 2019. (Welcome to our [website](https://www.dfrobot.com/))

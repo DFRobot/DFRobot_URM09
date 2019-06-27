@@ -77,6 +77,7 @@ public:
   uint8_t ReadDeviceAddress();
   void    ModifyDeviceAddress(uint8_t Address); 
   uint8_t txbuf[10] = {0};
+  
 private:
   void    i2cWriteTemDistance(uint8_t Reg, uint8_t *pdata, uint8_t datalen);
   uint8_t _addr;
