@@ -61,14 +61,14 @@ bool DFRobot_URM09::begin(uint8_t addr0)
 void DFRobot_URM09::SetModeRange(uint8_t Range ,uint8_t SetMode)
 {  
   txbuf[0] = (uint8_t)(Range | SetMode);   // Mode and range write to configuration register. 
-  i2cWriteTemDistance(CFG_INDEX , &txbuf[0], 1 );
+  i2cWriteTemDistance(eCFG_INDEX , &txbuf[0], 1 );
 }
 
 /* Write command registers and send ranging commands in passive mode */
 void DFRobot_URM09::SetMeasurement()
 { 
   txbuf[0] = CMD_DISTANCE_MEASURE;
-  i2cWriteTemDistance(CMD_INDEX , &txbuf[0],1 );
+  i2cWriteTemDistance(eCMD_INDEX , &txbuf[0],1 );
 }
 
 /* Read the temperature data of the register */
@@ -77,7 +77,7 @@ int16_t DFRobot_URM09::i2cReadTemperature()
   uint8_t i = 0;
   uint8_t rxbuf[10] = {0};
   Wire.beginTransmission(_addr);       // transmit to device Address
-  Wire.write(TEMP_H_INDEX);            // sends one byte
+  Wire.write(eTEMP_H_INDEX);            // sends one byte
   Wire.endTransmission();              // stop transmitting
   Wire.requestFrom(_addr, (uint8_t)2);
   while (Wire.available())             // slave may send less than requested
@@ -93,7 +93,7 @@ int16_t DFRobot_URM09::i2cReadDistance()
   uint8_t rxbuf[10] = {0};
     
   Wire.beginTransmission(_addr);       // transmit to device Address
-  Wire.write(DIST_H_INDEX);            // sends one byte
+  Wire.write(eDIST_H_INDEX);            // sends one byte
   Wire.endTransmission();              // stop transmitting
   Wire.requestFrom(_addr, (uint8_t)2);
   while (Wire.available())             // slave may send less than requested
@@ -133,7 +133,7 @@ void DFRobot_URM09::ModifyDeviceAddress(uint8_t Address)
 {
   txbuf[0] = Address;
   // Write the new address xxxx to the address register. 
-  i2cWriteTemDistance(SLAVEADDR_INDEX ,&txbuf[0] ,1 ); 
+  i2cWriteTemDistance(eSLAVEADDR_INDEX ,&txbuf[0] ,1 ); 
 }
 
 /* read i2c device number */
@@ -142,7 +142,7 @@ uint8_t DFRobot_URM09::ReadDeviceAddress()
   uint8_t i = 0;
   uint8_t rxbuf[10]={0};
   Wire.beginTransmission(_addr);       // transmit to device Address
-  Wire.write(SLAVEADDR_INDEX);         // sends one byte
+  Wire.write(eSLAVEADDR_INDEX);         // sends one byte
   Wire.endTransmission();              // stop transmitting
   Wire.requestFrom(_addr, (uint8_t)1);
   while (Wire.available())             // slave may send less than requested

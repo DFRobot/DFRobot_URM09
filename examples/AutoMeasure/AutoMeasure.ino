@@ -19,6 +19,10 @@ DFRobot_URM09 URM09;
 
 void setup() {
   Serial.begin(9600);
+  /*
+   * I2c device number 1-127
+   * When the i2c device number is not passed, the default parameter is 0x11
+   */
   while(!URM09.begin())
   {
     Serial.println("I2c device number error");

@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 '''
-  # AutoMeasure.py
+  # PassiveMeasure.py
   #
   # Connect board with raspberryPi.
   # Make board power and URM09 connection correct.

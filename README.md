@@ -32,22 +32,23 @@ public:
    * @brief Enum register configuration
    */
   typedef enum{
-    SLAVEADDR_INDEX = 0,
-    PID_INDEX,
-    VERSION_INDEX,
-    DIST_H_INDEX,         //High distance eight digits 
-    DIST_L_INDEX,         //Low  distance eight digits 
-    TEMP_H_INDEX,         //High temperature eight digits 
-    TEMP_L_INDEX,         //Low  temperature eight digits 
-    CFG_INDEX,
-    CMD_INDEX,
-    REG_NUM
+    eSLAVEADDR_INDEX = 0,
+    ePID_INDEX,
+    eVERSION_INDEX,
+    eDIST_H_INDEX,         //High distance eight digits 
+    eDIST_L_INDEX,         //Low  distance eight digits 
+    eTEMP_H_INDEX,         //High temperature eight digits 
+    eTEMP_L_INDEX,         //Low  temperature eight digits 
+    eCFG_INDEX,
+    eCMD_INDEX,
+    eREG_NUM
   }eRegister_t;
 
  /*
   * @brief initialization parameters for i2c
   *
-  * @param addr0 is I2c device number 
+  * @param addr0 is I2c device number 1-127
+  *        When the i2c device number is not passed, the default parameter is 0x11
   *
   * @return true and false
   */
@@ -113,72 +114,6 @@ public:
 };
 
 ```
-
-### raspberry 
-```Python
-import URM09
-
-/*
- * @brief Set i2c device number 
- *
- * @param I2c device number
- */
-  def begin(self, calib):
-
-/*
- * @brief Set the automatic mode or the passive mode and the measurement distance
- *
- * @param Range is measured range
- *        #define    MEASURE_RANG_500  (0x20)     // Ranging from 500 
- *        #define    MEASURE_RANG_300  (0x10)     // Ranging from 300 
- *        #define    MEASURE_RANG_150  (0x00)     // Ranging from 100 
- *
- * @param SetMode is measurement pattern
-          Set measurement mode, automatic measurement and passive measurement. 
- *        #define    MEASURE_MODE_AUTOMATIC  (0x80)           // automatic mode
- *        #define    MEASURE_MODE_PASSIVE    (0x00)           // passive mode
- */
-  def SetModeRange(self ,Range ,SetMode):
-
-/*
- * @brief Write command registers and send ranging commands in passive mode 
- *
- * @param Measurement is Write an order.
- */
-  def SetMeasurement(self ,Measurement):
-
-/*
- * @brief Read the temperature data of the register
- *
- * @return Temperature value. 
- *         The value of an increase of 10 times the actual temperature. 
- *         Example: if the readout value is 0x00fe, the actual temperature is 0x00fe / 10 = 25.4 
- */
-  def i2cReadTemperature(self):
-
-/*
- * @brief Read the distance data of the register
- *
- * @return Distance value. 
- */
-  def i2cReadDistance(self):
-
-/*
- * @brief Modify the i2c device number.
- *
- * @param i2c device number.
- */
-  def ModifyDeviceNumber(self ,Address):
-
-
-/*
- * @brief read i2c device number.
- *
- * @return i2c device number.
- */
-  def ReadDeviceNumber(self):
-```
-
 ## Compatibility
 
 MCU                | Work Well | Work Wrong | Untested  | Remarks
@@ -194,4 +129,4 @@ Arduino uno        |      √       |              |             |
 
 ## Credits
 
-Written by Frank(jiehan.guo@dfrobot.com), 2019. (Welcome to our [website](https://www.dfrobot.com/))
+Written by Frank(753310566@qq.com), 2019. (Welcome to our [website](https://www.dfrobot.com/))

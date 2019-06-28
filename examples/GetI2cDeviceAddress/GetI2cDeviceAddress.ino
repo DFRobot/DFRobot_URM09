@@ -1,5 +1,5 @@
 /*!
- * PassiveMesure.ino
+ * GetI2cDeviceAddress.ino
  *
  * Download this demo to test config to URM09, connect sensor through IIC interface
  * Data will print on your serial monitor

@@ -38,14 +38,14 @@
 #include <Wire.h>
 #include <Arduino.h>
 
-#define    MEASURE_MODE_AUTOMATIC  (0x80)           // automatic mode
-#define    MEASURE_MODE_PASSIVE    (0x00)           // passive mode
+#define    MEASURE_MODE_AUTOMATIC  0x80           // automatic mode
+#define    MEASURE_MODE_PASSIVE    0x00           // passive mode
 
-#define    CMD_DISTANCE_MEASURE    (0x01)           // passive mode configure registers
+#define    CMD_DISTANCE_MEASURE    0x01           // passive mode configure registers
 
-#define    MEASURE_RANG_500        (0x20)           // Ranging from 500 
-#define    MEASURE_RANG_300        (0x10)           // Ranging from 300 
-#define    MEASURE_RANG_150        (0x00)           // Ranging from 100 
+#define    MEASURE_RANG_500        0x20           // Ranging from 500 
+#define    MEASURE_RANG_300        0x10           // Ranging from 300 
+#define    MEASURE_RANG_150        0x00           // Ranging from 100 
 
 
 class DFRobot_URM09{  
@@ -54,16 +54,16 @@ public:
    * @brief Enum register configuration
    */
   typedef enum{
-    SLAVEADDR_INDEX = 0,
-    PID_INDEX,
-    VERSION_INDEX,
-    DIST_H_INDEX,         //High distance eight digits 
-    DIST_L_INDEX,         //Low  distance eight digits 
-    TEMP_H_INDEX,         //High temperature eight digits 
-    TEMP_L_INDEX,         //Low  temperature eight digits 
-    CFG_INDEX,
-    CMD_INDEX,
-    REG_NUM
+    eSLAVEADDR_INDEX = 0,
+    ePID_INDEX,
+    eVERSION_INDEX,
+    eDIST_H_INDEX,         //High distance eight digits 
+    eDIST_L_INDEX,         //Low  distance eight digits 
+    eTEMP_H_INDEX,         //High temperature eight digits 
+    eTEMP_L_INDEX,         //Low  temperature eight digits 
+    eCFG_INDEX,
+    eCMD_INDEX,
+    eREG_NUM
   }eRegister_t;
   
   DFRobot_URM09();
