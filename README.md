@@ -129,4 +129,4 @@ Arduino uno        |      √       |              |             |
 
 ## Credits
 
-Written by Frank(753310566@qq.com), 2019. (Welcome to our [website](https://www.dfrobot.com/))
+Written by ZhixinLiu(zhixin.liu@dfrobot.com), 2019. (Welcome to our [website](https://www.dfrobot.com/))
