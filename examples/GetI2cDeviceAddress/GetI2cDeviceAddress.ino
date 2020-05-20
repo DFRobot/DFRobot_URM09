@@ -1,17 +1,15 @@
-/*!
- * GetI2cDeviceAddress.ino
- *
- * Download this demo to test config to URM09, connect sensor through IIC interface
- * Data will print on your serial monitor
- *
- * This example is to get the device number of the urm09.
- *
- * Copyright   [DFRobot](http://www.dfrobot.com), 2016
- * Copyright   GNU Lesser General Public License
- *
- * version  V1.0
- * date  25/06/2019
- */
+ /*!
+  * @file  GetI2cDeviceAddress.ino
+  * @brief Get iic device address
+  * @n This example is to get the iic device address and print it to the serial port
+  *
+  * @copyright   Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
+  * @licence     The MIT License (MIT)
+  * @author      ZhixinLiu(zhixin.liu@dfrobot.com)
+  * @version     version  V1.1
+  * @date        2020-5-20
+  * @get         from https://www.dfrobot.com
+  * @url   */
 #include "DFRobot_URM09.h"
 
 /* Create a URM09 object to communicate with IIC. */

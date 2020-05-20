@@ -26,7 +26,7 @@ URM09 module.
 
 1. The module has two ultrasonic rangings, one for transmission and the other for reception. <br>
 2. Can measure the temperature of the module. <br>
-3. The measuring distance can be configured to be 100cm, 150cm, 500cm. The smaller the distance, the higher the precision. <br>
+3. The measuring distance can be configured to be 150cm, 300cm, 500cm. The smaller the distance, the higher the precision. <br>
 4. Can be configured for both active and passive measurements. <br>
 
 ## Installation
@@ -54,9 +54,9 @@ class DFRobot_URM09:
   
   _MEASURE_RANG_500       = 0x20          # Ranging from 500
   _MEASURE_RANG_300       = 0x10          # Ranging from 300 
-  _MEASURE_RANG_150       = 0x00          # Ranging from 100
+  _MEASURE_RANG_150       = 0x00          # Ranging from 150
   
-  ''' Enum register configuration '''
+  ''' register configuration '''
   SLAVEADDR_INDEX = 0
   PID_INDEX       = 1
   VERSION_INDEX   = 2
@@ -73,56 +73,51 @@ class DFRobot_URM09:
   ''' Conversion data '''
   txbuf      = [0]                        #Temporary data
   
-  
-  def begin(self, calib):
-    '''
-      @brief    Set i2c device number
-      @param    calib: device number
-    '''
-
-  def SetModeRange(self ,Range ,SetMode):
+  def set_mode_range(self ,Range ,SetMode):
     '''
       @brief    Set dc motor encoder reduction ratio
       @param Range: Measured distance
             # _MEASURE_RANG_500              // Ranging from 500 
             # _MEASURE_RANG_300              // Ranging from 300 
-            # _MEASURE_RANG_150              // Ranging from 100
+            # _MEASURE_RANG_150              // Ranging from 150
       @param SetMode: Set mode
             # _MEASURE_MODE_AUTOMATIC        // automatic mode
             # _MEASURE_MODE_PASSIVE          // passive mode
     '''
 
-  def SetMeasurement(self):
+  def measurement_start(self):
     '''
       @brief    Passive mode ranging command
     '''
 
-  def i2cReadTemperature(self):
+  def read_temperature(self):
     '''
       @brief    read Temperature
       @return   Temperature
     '''
 
-  def i2cReadDistance(self):
+  def read_distance(self):
       '''
       @brief    read Distance
       @return   Distance
     '''
 
-  def ModifyDeviceNumber(self ,Address):
+  def modify_device_number(self ,Address):
     '''
       @brief    Modify i2c device number
       @param Address: i2c device number 1-127
     '''
 
-  def ReadDeviceNumber(self):
+  def read_device_number(self):
     '''
       @brief    read i2c device number
       @return   i2c device number
     '''
-
 ```
+## History
+
+- June 25, 2019 - Version 1.0 released.
+-  May 20, 2020 - Version 1.1 released.
 
 ## Credits
-
-Written by Frank(753310566@qq.com), 2019. (Welcome to our [website](https://www.dfrobot.com/))
+Written by ZhixinLiu(zhixin.liu@dfrobot.com), 2020. (Welcome to our [website](https://www.dfrobot.com/))

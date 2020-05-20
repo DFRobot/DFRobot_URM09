@@ -60,7 +60,7 @@ public:
   * @param Range is measured range
   *        #define    MEASURE_RANG_500    // Ranging from 500 
   *        #define    MEASURE_RANG_300    // Ranging from 300 
-  *        #define    MEASURE_RANG_150    // Ranging from 100 
+  *        #define    MEASURE_RANG_150    // Ranging from 150 
   *
   * @param SetMode is measurement pattern
            Set measurement mode, automatic measurement and passive measurement. 
@@ -79,7 +79,7 @@ public:
   *
   * @return Temperature value.
   */
-   int16_t i2cReadTemperature();
+   float i2cReadTemperature();
 
  /*
   * @brief read distance.
@@ -124,8 +124,8 @@ Arduino uno        |      √       |              |             |
 
 ## History
 
-- June 25, 2019 - Version 0.1 released.
-
+- June 25, 2019 - Version 1.0 released.
+-  May 20, 2020 - Version 1.1 released.
 
 ## Credits
 

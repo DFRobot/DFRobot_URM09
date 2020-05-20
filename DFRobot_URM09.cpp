@@ -1,38 +1,3 @@
-/*
-
-  MIT License
-
-  Copyright (C) <2019> <@DFRobot Frank>
-
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy of this
-
-  software and associated documentation files (the "Software"), to deal in the Software
-
-  without restriction, including without limitation the rights to use, copy, modify,
-
-  merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
-
-  permit persons to whom the Software is furnished to do so.
-
-
-
-  The above copyright notice and this permission notice shall be included in all copies or
-
-  substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-
-  INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
-
-  PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
-
-  FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-
-  ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
- */
-
 #include "DFRobot_URM09.h"
 #include <Arduino.h>
 #include <Wire.h>
@@ -72,7 +37,7 @@ void DFRobot_URM09::SetMeasurement()
 }
 
 /* Read the temperature data of the register */
-int16_t DFRobot_URM09::i2cReadTemperature()
+float  DFRobot_URM09::i2cReadTemperature()
 {
   uint8_t i = 0;
   uint8_t rxbuf[10] = {0};
@@ -83,7 +48,7 @@ int16_t DFRobot_URM09::i2cReadTemperature()
   while (Wire.available())             // slave may send less than requested
     rxbuf[i++] = Wire.read();
   
-  return ((int16_t)rxbuf[0] << 8) + rxbuf[1];
+  return (((int16_t)rxbuf[0] << 8) + rxbuf[1]) / 10;
 }
 
 /* Read the distance data of the register  */
