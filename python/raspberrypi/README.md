@@ -35,54 +35,25 @@ This Sensor should work with DFRobot_URM09 on RaspberryPi. <br>
 Run the program:
 
 ```
-$> python AutoMeasure.py
-$> python ModeI2cAddress.py
-$> python PassiveMeasure.py
+$> python auto_measure.py
+$> python mode_i2c_address.py
+$> python passive_measure.py
 ```
 
 ## Methods
 
 ```py
 
-class DFRobot_URM09:
-
-  ''' Configuration mode and parameters '''
-  _MEASURE_MODE_AUTOMATIC = 0x80          # automatic mode
-  _MEASURE_MODE_PASSIVE   = 0x00          # passive mode
-  
-  _CMD_DISTANCE_MEASURE   = 0x01          # passive mode configure registers
-  
-  _MEASURE_RANG_500       = 0x20          # Ranging from 500
-  _MEASURE_RANG_300       = 0x10          # Ranging from 300 
-  _MEASURE_RANG_150       = 0x00          # Ranging from 150
-  
-  ''' register configuration '''
-  SLAVEADDR_INDEX = 0
-  PID_INDEX       = 1
-  VERSION_INDEX   = 2
-  DIST_H_INDEX    = 3                     #Distance register high 8 bits
-  DIST_L_INDEX    = 4                     #Distance register low 8 bits
-  
-  TEMP_H_INDEX    = 5                     #Temperature register high 8 bits
-  TEMP_L_INDEX    = 6                     #Temperature register low 8 bits
-
-  CFG_INDEX       = 7
-  CMD_INDEX       = 8
-  REG_NUM         = 9
-  
-  ''' Conversion data '''
-  txbuf      = [0]                        #Temporary data
-  
   def set_mode_range(self ,Range ,SetMode):
     '''
       @brief    Set dc motor encoder reduction ratio
       @param Range: Measured distance
-            # _MEASURE_RANG_500              // Ranging from 500 
-            # _MEASURE_RANG_300              // Ranging from 300 
-            # _MEASURE_RANG_150              // Ranging from 150
+      @n            _MEASURE_RANG_500             # Ranging from 500 
+      @n            _MEASURE_RANG_300             # Ranging from 300 
+      @n            _MEASURE_RANG_150             # Ranging from 150
       @param SetMode: Set mode
-            # _MEASURE_MODE_AUTOMATIC        // automatic mode
-            # _MEASURE_MODE_PASSIVE          // passive mode
+      @n            _MEASURE_MODE_AUTOMATIC       # automatic mode
+      @n            _MEASURE_MODE_PASSIVE         # passive mode
     '''
 
   def measurement_start(self):
