@@ -13,13 +13,13 @@ DFRobot_URM09	KEYWORD1
 #######################################
 
 begin	KEYWORD2
-SetModeRange	KEYWORD2
-SetMeasurement	KEYWORD2
-i2cReadTemperature	KEYWORD2
-i2cReadDistance	KEYWORD2
-GetI2cDeviceAddress	KEYWORD2
-ReadDeviceAddress	KEYWORD2
-ModifyDeviceAddress	KEYWORD2
+setModeRange	KEYWORD2
+measurement	KEYWORD2
+getTemperature	KEYWORD2
+getDistance	KEYWORD2
+scanDevice	KEYWORD2
+getI2CAddress	KEYWORD2
+modifyI2CAddress	KEYWORD2
 DFRobot_URM09	KEYWORD2
 ~DFRobot_URM09	KEYWORD2
 i2cWriteTemDistance	KEYWORD2
