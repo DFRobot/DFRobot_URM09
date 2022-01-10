@@ -9,7 +9,7 @@ This ranging module, with small size, provides strong environment applicability,
 ![效果图](../../resources/images/SEN0304_WIKI_Cover.jpg)
 
 
-## Product Link（https://www.dfrobot.com.cn/goods-1905.html）
+## Product Link（https://www.dfrobot.com/product-1832.html）
 
     SKU：SEN0304
 
@@ -99,8 +99,8 @@ Download the library file before use, paste it into the custom directory for Ras
 ## History
 
 - 2019/06/25 - V1.0.0 Version
-
 - 2020/05/30 - V1.1.0 Version
+- 2022/01/10 - V1.2.0 Version
 
 
 ## Credits
