@@ -32,7 +32,7 @@ Revisable I2C device address, avoiding multiple devices address conflicts.
 
 ## Installation
 There are two methods for using this library:
-1. Open Arduino IDE, search for "DFRobot_MGC3130" on the status bar in Tools ->Manager Libraries and install the library.
+1. Open Arduino IDE, search for "DFRobot_URM09" on the status bar in Tools ->Manager Libraries and install the library.
 2. Download the library file before use, paste it into \Arduino\libraries directory, then open the examples folder and run the demo in the folder.
 
 ## Methods
