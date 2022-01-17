@@ -6,7 +6,7 @@
 可以广泛应用于户外环境中，尤其适用于温差变化较快的环境。是机器人自动避障行走，汽车倒车报警器、门铃、警戒报警器、地铁安全线提示、银行及取款机的一米线提示等等项目的绝佳选择。<br>
 本款测距模块体积小，环境适用性强，精度高，测量范围广，即插即用，方便快捷。
 
-![正反面svg效果图](resources\images\SEN0304_WIKI_Cover.jpg)
+![正反面svg效果图](resources/images/SEN0304_WIKI_Cover.jpg)
 
 
 ## 产品链接（https://www.dfrobot.com.cn/goods-1905.html）
