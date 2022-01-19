@@ -25,13 +25,13 @@ urm09 = DFRobot_URM09_IIC(IIC_MODE, IIC_ADDRESS)
 
 def setup():
   '''
-      The module is configured in automatic mode or passive
-         _MEASURE_MODE_AUTOMATIC        automatic mode
-         _MEASURE_MODE_PASSIVE          passive mode
-      The measurement distance is set to 500,300,150 
-         _MEASURE_RANG_500              Ranging from 500 
-         _MEASURE_RANG_300              Ranging from 300 
-         _MEASURE_RANG_150              Ranging from 150
+    The module is configured in automatic mode or passive
+      _MEASURE_MODE_AUTOMATIC        automatic mode
+      _MEASURE_MODE_PASSIVE          passive mode
+    The measurement distance is set to 500,300,150 
+      _MEASURE_RANG_500              Ranging from 500 
+      _MEASURE_RANG_300              Ranging from 300 
+      _MEASURE_RANG_150              Ranging from 150
   '''
   urm09.set_mode_range(urm09._MEASURE_MODE_AUTOMATIC, urm09._MEASURE_RANG_500)
 

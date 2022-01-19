@@ -69,6 +69,8 @@ class DFRobot_URM09(object):
       @return   Temperature
     '''
     rslt = self.read_reg(self.TEMP_H_INDEX, 2)
+    if rslt == -1:
+      return 25.0
     return (float)(((rslt[0] << 8) + rslt[1]) / 10)
 
   def get_distance(self):
@@ -76,10 +78,13 @@ class DFRobot_URM09(object):
       @brief    get distance
       @return   Distance
     '''
+    temp = 0.0
     rslt = self.read_reg(self.DIST_H_INDEX, 2)
+    if rslt == -1:
+      return -1
     if ((rslt[0] << 8) + rslt[1]) < 32768:
       return ((rslt[0] << 8) + rslt[1])
-    else : 
+    else: 
       return (((rslt[0] << 8) + rslt[1]) - 65536)
 
   def modify_device_number(self, Address):
@@ -104,8 +109,17 @@ class DFRobot_URM09_IIC(DFRobot_URM09):
     super(DFRobot_URM09_IIC, self).__init__(bus)
 
   def write_reg(self, reg, data):
-    self.i2cbus.write_i2c_block_data(self.__addr, reg, data)
-
+    while 1:
+      try:
+        self.i2cbus.write_i2c_block_data(self.__addr, reg, data)
+        return
+      except:
+        print("please check connect!")
+        time.sleep(1)
+    
   def read_reg(self, reg, len):
-    rslt = self.i2cbus.read_i2c_block_data(self.__addr, reg, len)
+    try:
+      rslt = self.i2cbus.read_i2c_block_data(self.__addr, reg, len)
+    except:
+      rslt = -1
     return rslt
