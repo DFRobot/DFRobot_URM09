@@ -12,7 +12,7 @@
 '''
 import sys
 import time
-sys.path.append("../..")
+sys.path.append("../")
 from DFRobot_URM09 import *
 
 IIC_MODE         = 0x01            # default use IIC1
