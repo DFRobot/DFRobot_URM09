@@ -9,7 +9,7 @@ This ranging module, with small size, provides strong environment applicability,
 ![效果图](resources/images/SEN0304_WIKI_Cover.jpg)
 
 
-## Product Link（https://www.dfrobot.com/product-1832.html）
+## Product Link(https://www.dfrobot.com/product-1832.html)
 
     SKU：SEN0304
 

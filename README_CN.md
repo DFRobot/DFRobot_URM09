@@ -9,7 +9,7 @@
 ![正反面svg效果图](resources/images/SEN0304_WIKI_Cover.jpg)
 
 
-## 产品链接（https://www.dfrobot.com.cn/goods-1905.html）
+## 产品链接(https://www.dfrobot.com.cn/goods-1905.html)
 
     SKU：SEN0304
 
@@ -41,7 +41,7 @@
   /**
    * @fn begin
    * @brief 初始化i2c
-   * @param address i2c设备号（1-127）我们没有传入设备号时，设备号为0x11
+   * @param address i2c设备号(1-127)我们没有传入设备号时，设备号为0x11
    * @return 返回bool 类型，用以表示初始化的状态
    * @retval true 初始化成功
    * @retval false 初始化失败
@@ -72,14 +72,14 @@
   /**
    * @fn getTemperature
    * @brief 获取温度值
-   * @return 温度值 单位（摄氏度）
+   * @return 温度值 单位(摄氏度)
    */
   float getTemperature(void);
 
   /**
    * @fn getDistance
    * @brief 读取距离
-   * @return 距离值 单位（厘米）
+   * @return 距离值 单位(厘米)
    * @n 增加的数值是实际温度的10倍
    * @n 例如:读出值为0x00fe，则实际温度为0x00fe / 10 = 25.4
    * @return None
@@ -105,7 +105,7 @@
   /**
    * @fn modifyI2CAddress
    * @brief 修改 i2c 设备地址
-   * @param address i2c设备地址号（1-127）
+   * @param address i2c设备地址号(1-127)
    * @return None
    */
   void modifyI2CAddress(uint8_t address);

@@ -9,7 +9,7 @@
 ![正反面svg效果图](../../resources/images/SEN0304_WIKI_Cover.jpg)
 
 
-## 产品链接（https://www.dfrobot.com.cn/goods-1905.html）
+## 产品链接(https://www.dfrobot.com.cn/goods-1905.html)
 
     SKU：SEN0304
 
