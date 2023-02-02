@@ -133,4 +133,4 @@ private:
   void    i2cWriteTemDistance(uint8_t reg, uint8_t *pdata, uint8_t datalen);
   uint8_t _addr;
 };
-#endif.
+#endif
